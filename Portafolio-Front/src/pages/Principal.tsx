@@ -1,9 +1,11 @@
-
+import Introduction from "../components/Introduction"
+import BarraLateral from "../components/BarraLateral"
 
 export default function Principal() {
   return (
-    <div>
-      <p>esto es lo principal</p>
+    <div className="absolute inset-0 flex items-center justify-center">
+      <Introduction/>
+      <BarraLateral/>
     </div>
   )
 }
