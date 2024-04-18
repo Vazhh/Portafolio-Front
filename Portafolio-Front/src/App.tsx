@@ -5,7 +5,7 @@ import router from "./pages/router"
 
 function App() {
   return (
-    <div className="bg-slate-500 h-screen" >
+    <div className="bg-[#252323] h-screen w-screen m-0 p-0 relative" >
       <RouterProvider router={router} />
     </div>
 
