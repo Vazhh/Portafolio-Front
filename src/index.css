@@ -1,3 +1,992 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+
+.cardBack {
+    margin-top: 150px;
+    position: absolute;
+    border: 1px solid rgb(199, 191, 191);
+    border-radius: 10px;
+    transform: rotate(90deg);
+    width: 29em;
+    height: 54em;
+    background: linear-gradient(270deg, #ffffff, #f1e6e6, #da9172);
+    box-shadow: inset 0px 0px 150px 2px #ffffff;
+    z-index: -2;
+}
+
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100em;
+    height: 300px;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 286px;
+    height: 150px;
+    border: 1px solid transparent;
+    border-top-left-radius: 10px;
+    transition: .4s ease-in-out, .2s background-color ease-in-out, .2s background-image ease-in-out;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px)
+}
+
+.item .html {
+    width: 65px;
+    height: 65px;
+    opacity: 0;
+    transition: .2s ease-in-out;
+}
+
+.item:nth-child(2) {
+    border-radius: 0px;
+}
+
+.item:nth-child(2) .css {
+    width: 65px;
+    height: 65px;
+    opacity: 0;
+    transition: .2s ease-in-out;
+}
+
+.item:nth-child(3) {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 0px;
+}
+
+.item:nth-child(3) .javas {
+    width: 65px;
+    height: 65px;
+    opacity: 0;
+    transition: .2s ease-in-out;
+}
+
+.item:nth-child(4) {
+    border-radius: 0px;
+}
+
+.item:nth-child(4) .react {
+    width: 65px;
+    height: 65px;
+    opacity: 0;
+    transition: .2s ease-in-out;
+}
+
+.item:nth-child(5) {
+    border-radius: 0px;
+}
+
+.item:nth-child(5) .node {
+    width: 65px;
+    height: 65px;
+    position: absolute;
+    margin-left: 0.2em;
+    margin-top: 0.2em;
+    opacity: 0;
+    transition: .2s ease-in-out;
+}
+
+.item:nth-child(6) {
+    border-radius: 0px;
+}
+
+.item:nth-child(6) .express {
+    width: 65px;
+    height: 65px;
+    fill: black;
+    opacity: 0;
+    transition: .2s ease-in-out;
+}
+
+.item:nth-child(6):hover .express {
+    fill: white;
+}
+
+.item:nth-child(7) {
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 0px;
+}
+
+.item:nth-child(7) .mongo {
+    width: 65px;
+    height: 65px;
+    opacity: 0;
+    transition: .2s ease-in-out;
+}
+
+.item:nth-child(8) {
+    border-radius: 0px;
+}
+
+.item:nth-child(8) .tail {
+    width: 65px;
+    height: 65px;
+    opacity: 0;
+    transition: .2s ease-in-out;
+}
+
+.item:nth-child(9) {
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 0px;
+}
+
+.item:nth-child(9) .boots {
+    width: 65px;
+    height: 65px;
+    opacity: 0;
+    transition: .2s ease-in-out;
+}
+
+.card:hover {
+    width: 100em;
+    cursor: pointer;
+}
+
+.card:hover .cardBack {
+    opacity: 0;
+}
+
+.card:hover .item {
+    margin: .2em;
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.card:hover .item:nth-child(5) {
+    border: transparent;
+}
+
+
+.card:hover .html {
+    opacity: 1;
+
+}
+
+.html:hover {
+    scale: 1.2;
+}
+
+.card:hover .css {
+    opacity: 1;
+}
+
+.css:hover {
+    scale: 1.2;
+}
+
+.card:hover .javas {
+    opacity: 1;
+}
+
+.javas:hover {
+    scale: 1.2;
+}
+
+.card:hover .react {
+    opacity: 1;
+}
+
+.react:hover {
+    scale: 1.2;
+}
+
+.card:hover .node {
+    opacity: 1;
+}
+
+.node:hover {
+    scale: 1.2;
+}
+
+.card:hover .express {
+    opacity: 1;
+}
+
+.express:hover {
+    scale: 1.2;
+}
+
+.card:hover .mongo {
+    opacity: 1;
+}
+
+.mongo:hover {
+    scale: 1.2;
+}
+
+.card:hover .tail {
+    opacity: 1;
+}
+
+.tail:hover {
+    scale: 1.2;
+}
+
+.card:hover .boots {
+    opacity: 1;
+}
+
+.boots:hover {
+    scale: 1.2;
+}
+
+.item:nth-child(1):hover .html {
+    fill: white;
+}
+
+.item:nth-child(1):hover {
+    animation: backgroundHtml .1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes backgroundHtml {
+    100% {
+        background-image: linear-gradient(#ED8183, #F5ECCD, #B0D7FF);
+    }
+}
+
+.item:nth-child(2):hover {
+    animation: backgroundCss .1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes backgroundCss {
+    100% {
+        background-image: linear-gradient(#C8FFFD, #C9FFE5, #DCABDF);
+    }
+}
+
+.item:nth-child(3):hover {
+    animation: bgJavas .1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes bgJavas {
+    100% {
+        background-image: linear-gradient(#FFAC92, #FEFA67, #C4FA2F);
+    }
+
+}
+
+.item:nth-child(4):hover {
+    animation: bgReact .1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes bgReact {
+    100% {
+        background-image: linear-gradient(#422659, #664279, #0B5968);
+    }
+
+}
+
+
+.item:nth-child(5):hover {
+    animation: backgroundNode .1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes backgroundNode {
+    100% {
+        background-image: linear-gradient(#C5DCA0, #F5F2B8, #F9DAD0);
+    }
+}
+
+.item:nth-child(6):hover {
+    animation: bgExpress .1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes bgExpress {
+    100% {
+        background-image: linear-gradient(#4E749D, #027BB4, #295F5A);
+    }
+}
+
+.item:nth-child(7):hover {
+    animation: bgMongo .1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes bgMongo {
+    100% {
+        background-image: linear-gradient(#07625A, #4C8075, #7D6C81);
+    }
+}
+
+.item:nth-child(8):hover {
+    animation: bgTail .1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes bgTail {
+    100% {
+        background-image: linear-gradient(#540011, #781629, #dc3e5d);
+    }
+}
+
+.item:nth-child(9):hover {
+    animation: backgroundBoots .1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes backgroundBoots {
+    100% {
+        background-image: linear-gradient(#DCD7FF, #A5F4FF, #00FFBD);
+    }
+}
+
+.item:nth-child(6):hover {
+    background-color: #171817;
+}
+
+.item:nth-child(4):hover {
+    background-color: #23ae92;
+}
+
+.item:nth-child(5):hover {
+    background-color: #5ec336;
+}
+
+.item:nth-child(7):hover {
+    background-color: #29b529;
+
+}
+
+.item:nth-child(8):hover {
+    background-color: #357076;
+
+}
+
+.item:nth-child(3):hover .javas>path:nth-of-type(1) {
+    fill: black;
+}
+
+.item:nth-child(3):hover .javas>path:nth-of-type(2) {
+    fill: white;
+}
+
+.item:nth-child(7):hover .mongo>path:nth-of-type(1) {
+    fill: white;
+}
+
+.text {
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3em;
+    transition: .4s ease-in-out;
+    background: linear-gradient(rgb(232, 89, 89), rgb(60, 54, 54));
+    -webkit-background-clip: text;
+    color: transparent;
+    text-align: center;
+    margin-top: 150px;
+    font-weight: bold;
+    letter-spacing: 0.33em;
+    z-index: 3;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.card:hover .text {
+    opacity: 0;
+    font-size: xx-large;
+    z-index: -3;
+}
+
+.itemText {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    padding-bottom: 10px;
+    color: rgb(64, 59, 59);
+    width: 100%;
+    opacity: 0;
+    transition-duration: .4s;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+    font-weight: 900;
+    z-index: -1;
+}
+
+.item:hover .itemText {
+    opacity: 1;
+    transition-duration: .4s;
+}
+
+.item:nth-child(1) :hover {
+    color: rgb(239, 97, 97);
+}
+
+.item:nth-child(2) :hover {
+    color: rgb(20, 146, 148);
+}
+
+.item:nth-child(4) :hover {
+    color: rgb(50, 238, 238);
+}
+
+.item:nth-child(5) :hover {
+    color: rgb(57, 176, 69);
+}
+
+.item:nth-child(6) :hover {
+    color: rgb(255, 255, 255);
+}
+
+.item:nth-child(7) :hover {
+    color: rgb(255, 255, 255);
+}
+
+.item:nth-child(8) :hover {
+    color: #62c2df;
+}
+
+.item:nth-child(9) :hover {
+    color: #7E13F8;
+}
+
+
+@media screen and (min-width: 1536px) {
+    .cardBack {
+        margin-top: 150px;
+        position: absolute;
+        border: 1px solid rgb(199, 191, 191);
+        border-radius: 10px;
+        transform: rotate(90deg);
+        width: 29em;
+        height: 54em;
+        background: linear-gradient(270deg, #ffffff, #f1e6e6, #da9172);
+        box-shadow: inset 0px 0px 150px 2px #ffffff;
+        z-index: -2;
+    }
+
+    .card {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100em;
+        height: 300px;
+        border-radius: 5px;
+        align-items: center;
+        justify-content: center;
+        z-index: -1;
+    }
+
+    .item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 286px;
+        height: 150px;
+        border: 1px solid transparent;
+        border-top-left-radius: 10px;
+        transition: .4s ease-in-out, .2s background-color ease-in-out, .2s background-image ease-in-out;
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px)
+    }
+
+    .item .html {
+        width: 65px;
+        height: 65px;
+        opacity: 0;
+        transition: .2s ease-in-out;
+    }
+
+    .item:nth-child(2) {
+        border-radius: 0px;
+    }
+
+    .item:nth-child(2) .css {
+        width: 65px;
+        height: 65px;
+        opacity: 0;
+        transition: .2s ease-in-out;
+    }
+
+    .item:nth-child(3) {
+        border-top-right-radius: 10px;
+        border-top-left-radius: 0px;
+    }
+
+    .item:nth-child(3) .javas {
+        width: 65px;
+        height: 65px;
+        opacity: 0;
+        transition: .2s ease-in-out;
+    }
+
+    .item:nth-child(4) {
+        border-radius: 0px;
+    }
+
+    .item:nth-child(4) .react {
+        width: 65px;
+        height: 65px;
+        opacity: 0;
+        transition: .2s ease-in-out;
+    }
+
+    .item:nth-child(5) {
+        border-radius: 0px;
+    }
+
+    .item:nth-child(5) .node {
+        width: 65px;
+        height: 65px;
+        position: absolute;
+        margin-left: 0.2em;
+        margin-top: 0.2em;
+        opacity: 0;
+        transition: .2s ease-in-out;
+    }
+
+    .item:nth-child(6) {
+        border-radius: 0px;
+    }
+
+    .item:nth-child(6) .express {
+        width: 65px;
+        height: 65px;
+        fill: black;
+        opacity: 0;
+        transition: .2s ease-in-out;
+    }
+
+    .item:nth-child(6):hover .express {
+        fill: white;
+    }
+
+    .item:nth-child(7) {
+        border-bottom-left-radius: 10px;
+        border-top-left-radius: 0px;
+    }
+
+    .item:nth-child(7) .mongo {
+        width: 65px;
+        height: 65px;
+        opacity: 0;
+        transition: .2s ease-in-out;
+    }
+
+    .item:nth-child(8) {
+        border-radius: 0px;
+    }
+
+    .item:nth-child(8) .tail {
+        width: 65px;
+        height: 65px;
+        opacity: 0;
+        transition: .2s ease-in-out;
+    }
+
+    .item:nth-child(9) {
+        border-bottom-right-radius: 10px;
+        border-top-left-radius: 0px;
+    }
+
+    .item:nth-child(9) .boots {
+        width: 65px;
+        height: 65px;
+        opacity: 0;
+        transition: .2s ease-in-out;
+    }
+
+    .card:hover {
+        width: 100em;
+        cursor: pointer;
+    }
+
+    .card:hover .cardBack {
+        opacity: 0;
+    }
+
+    .card:hover .item {
+        margin: .2em;
+        border-radius: 10px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    .card:hover .item:nth-child(5) {
+        border: transparent;
+    }
+
+
+    .card:hover .html {
+        opacity: 1;
+
+    }
+
+    .html:hover {
+        scale: 1.2;
+    }
+
+    .card:hover .css {
+        opacity: 1;
+    }
+
+    .css:hover {
+        scale: 1.2;
+    }
+
+    .card:hover .javas {
+        opacity: 1;
+    }
+
+    .javas:hover {
+        scale: 1.2;
+    }
+
+    .card:hover .react {
+        opacity: 1;
+    }
+
+    .react:hover {
+        scale: 1.2;
+    }
+
+    .card:hover .node {
+        opacity: 1;
+    }
+
+    .node:hover {
+        scale: 1.2;
+    }
+
+    .card:hover .express {
+        opacity: 1;
+    }
+
+    .express:hover {
+        scale: 1.2;
+    }
+
+    .card:hover .mongo {
+        opacity: 1;
+    }
+
+    .mongo:hover {
+        scale: 1.2;
+    }
+
+    .card:hover .tail {
+        opacity: 1;
+    }
+
+    .tail:hover {
+        scale: 1.2;
+    }
+
+    .card:hover .boots {
+        opacity: 1;
+    }
+
+    .boots:hover {
+        scale: 1.2;
+    }
+
+    .item:nth-child(1):hover .html {
+        fill: white;
+    }
+
+    .item:nth-child(1):hover {
+        animation: backgroundHtml .1s;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes backgroundHtml {
+        100% {
+            background-image: linear-gradient(#ED8183, #F5ECCD, #B0D7FF);
+        }
+    }
+
+    .item:nth-child(2):hover {
+        animation: backgroundCss .1s;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes backgroundCss {
+        100% {
+            background-image: linear-gradient(#C8FFFD, #C9FFE5, #DCABDF);
+        }
+    }
+
+    .item:nth-child(3):hover {
+        animation: bgJavas .1s;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes bgJavas {
+        100% {
+            background-image: linear-gradient(#FFAC92, #FEFA67, #C4FA2F);
+        }
+
+    }
+
+    .item:nth-child(4):hover {
+        animation: bgReact .1s;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes bgReact {
+        100% {
+            background-image: linear-gradient(#422659, #664279, #0B5968);
+        }
+
+    }
+
+
+    .item:nth-child(5):hover {
+        animation: backgroundNode .1s;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes backgroundNode {
+        100% {
+            background-image: linear-gradient(#C5DCA0, #F5F2B8, #F9DAD0);
+        }
+    }
+
+    .item:nth-child(6):hover {
+        animation: bgExpress .1s;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes bgExpress {
+        100% {
+            background-image: linear-gradient(#4E749D, #027BB4, #295F5A);
+        }
+    }
+
+    .item:nth-child(7):hover {
+        animation: bgMongo .1s;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes bgMongo {
+        100% {
+            background-image: linear-gradient(#07625A, #4C8075, #7D6C81);
+        }
+    }
+
+    .item:nth-child(8):hover {
+        animation: bgTail .1s;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes bgTail {
+        100% {
+            background-image: linear-gradient(#540011, #781629, #dc3e5d);
+        }
+    }
+
+    .item:nth-child(9):hover {
+        animation: backgroundBoots .1s;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes backgroundBoots {
+        100% {
+            background-image: linear-gradient(#DCD7FF, #A5F4FF, #00FFBD);
+        }
+    }
+
+    .item:nth-child(6):hover {
+        background-color: #171817;
+    }
+
+    .item:nth-child(4):hover {
+        background-color: #23ae92;
+    }
+
+    .item:nth-child(5):hover {
+        background-color: #5ec336;
+    }
+
+    .item:nth-child(7):hover {
+        background-color: #29b529;
+
+    }
+
+    .item:nth-child(8):hover {
+        background-color: #357076;
+
+    }
+
+    .item:nth-child(3):hover .javas>path:nth-of-type(1) {
+        fill: black;
+    }
+
+    .item:nth-child(3):hover .javas>path:nth-of-type(2) {
+        fill: white;
+    }
+
+    .item:nth-child(7):hover .mongo>path:nth-of-type(1) {
+        fill: white;
+    }
+
+    .text {
+        position: absolute;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 3em;
+        transition: .4s ease-in-out;
+        background: linear-gradient(rgb(232, 89, 89), rgb(60, 54, 54));
+        -webkit-background-clip: text;
+        color: transparent;
+        text-align: center;
+        margin-top: 150px;
+        font-weight: bold;
+        letter-spacing: 0.33em;
+        z-index: 3;
+        border-radius: 10px;
+        padding: 5px;
+    }
+
+    .card:hover .text {
+        opacity: 0;
+        font-size: xx-large;
+        z-index: -3;
+    }
+
+    .itemText {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        padding-bottom: 10px;
+        color: rgb(64, 59, 59);
+        width: 100%;
+        opacity: 0;
+        transition-duration: .4s;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: larger;
+        font-weight: 900;
+        z-index: -1;
+    }
+
+    .item:hover .itemText {
+        opacity: 1;
+        transition-duration: .4s;
+    }
+
+    .item:nth-child(1) :hover {
+        color: rgb(239, 97, 97);
+    }
+
+    .item:nth-child(2) :hover {
+        color: rgb(20, 146, 148);
+    }
+
+    .item:nth-child(4) :hover {
+        color: rgb(50, 238, 238);
+    }
+
+    .item:nth-child(5) :hover {
+        color: rgb(57, 176, 69);
+    }
+
+    .item:nth-child(6) :hover {
+        color: rgb(255, 255, 255);
+    }
+
+    .item:nth-child(7) :hover {
+        color: rgb(255, 255, 255);
+    }
+
+    .item:nth-child(8) :hover {
+        color: #62c2df;
+    }
+
+    .item:nth-child(9) :hover {
+        color: #7E13F8;
+    }
+
+} 
+
+
+
+ /* @media screen and (max-width: 1535px) {
+    .item {
+        width: 183.33px;
+        height: 110px;
+       
+    }
+
+    .cardBack {
+        height: 550px;
+        width: 330px;
+        bottom: 250px;
+
+    }
+
+    .item .html {
+        width: 50px;
+        height: 50px;
+    }
+
+    .item:nth-child(2) .css {
+        width: 50px;
+        height: 50px;
+    }
+
+    .item:nth-child(3) .javas {
+        width: 50px;
+        height: 50px;
+    }
+
+    .item:nth-child(4) .react {
+        width: 50px;
+        height: 50px;
+    }
+
+    .item:nth-child(5) .node {
+        width: 50px;
+        height: 50px;
+    }
+
+    .item:nth-child(6) .express {
+        width: 50px;
+        height: 50px;
+    }
+
+    .item:nth-child(7) .mongo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .item:nth-child(8) .tail {
+        width: 50px;
+        height: 50px;
+    }
+
+    .item:nth-child(9) .boots {
+        width: 50px;
+        height: 50px;
+    }
+
+    .text {
+        margin-top: 40px;
+    }
+
+    .itemText {
+        margin-top: 110px;
+    }
+}  */
