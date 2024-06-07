@@ -11,7 +11,7 @@ function App() {
 
   
   return (
-    <div className="dark:bg-[#252323] h-screen w-screen m-0 p-0 relative" >
+    <div className="dark:bg-[#252323] h-screen w-screen m-0 p-0 relative -z-0" >
       <Provider  store={store}>
         <img src={duke} className="w-[100px] absolute mt-4 ms-10" alt="" />
         <Languaje/>
